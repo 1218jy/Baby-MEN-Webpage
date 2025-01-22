@@ -3,37 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - The Baby Matrix</title>
+    <title>About Us</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Beaufort:wght@400;700&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+        @import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins';
+            color: #ffffff; 
+            background-image: url("{{ url_for('static', filename='background/about_us.png') }}");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            padding-top: 30px;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; 
-            color: #4A90E2; 
+            height: 100%;
+            
         }
         header {
-            background-color: #ffffff; 
-            color: #E94E77;
+            color: #ffffff;
             padding: 20px;
             text-align: center;
         }
         .container {
             max-width: 1200px;
             margin: 20px auto;
-            padding: 20px;
-            background: #ffffff; 
+            padding: 20px; 
             border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
         }
         h1 {
-            color: #4A90E2; 
+            color: #ffffff;
+            text-align: center;
+        
         }
-        p {
+        h3 {
             line-height: 1.6;
             margin: 10px 0;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: 'Poppins';
         }
         .team {
             display: grid;
@@ -42,17 +55,17 @@
             margin-top: 20px;
         }
         .team-member {
-            background-color: #f4f4f4; 
+            background-color: #1F1F1F; 
             padding: 20px;
             border-radius: 8px;
             text-align: center;
-            color: #E94E77; 
+            color: #00bf63; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
         .team-member:hover {
-            background-color: #E94E77; 
-            color: white;
+            background-color: #00bf63; 
+            color:black;
             cursor: pointer;
         }
         .team-member img {
@@ -60,7 +73,7 @@
             height: 200px;
             border-radius: 50%;
             margin-bottom: 10px;
-            border: 5px solid #E94E77;
+            border: 5px solid #00bf63;
         }
         .team-member h3 {
             margin: 10px 0;
@@ -73,14 +86,14 @@
         }
         .leader {
             grid-column: span 3; 
-            background-color: #f4f4f4; 
-            color: #E94E77; 
+            background-color:#1F1F1F; 
+            color: #00bf63; 
         }
         footer {
             text-align: center;
             padding: 10px;
             background-color: #ffffff; 
-            color: #E94E77;
+            color: #00bf63;
             margin-top: 20px;
         }
         .back-link {
@@ -88,9 +101,9 @@
             margin-top: 20px;
         }
         .back-link a {
-            color: #E94E77; 
+            color: #00bf63; 
             text-decoration: none;
-            border: 2px solid #E94E77; 
+            border: 2px solid #00bf63; 
             border-radius: 10px;
             padding: 15px 30px;
             display: inline-block;
@@ -98,32 +111,35 @@
             transition: all 0.3s ease;
         }
         .back-link a:hover {
-            background-color: #E94E77;
+            background-color: #00bf63;
             color: white; 
             text-decoration: none;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <h1><font color=#E94E77>About Us - The Baby Matrix</font></h1>
+        <h1 style="color: #00bf63; font-size: 90px;">ABOUT US</h1>
+        <img class="logo" src="{{ url_for('static', filename='images/Logo2.png') }}" style="width: 400px; height: auto;">
     </header>
     <div class="container">
         <section>
-            <h1>Who Are We?</h1>
-            <p><h3>The Baby Matrix are a close-knit group of friends united by shared interests in learning, playing games, and staying updated on the latest news. From exploring new ideas to enjoying each other's company, we thrive on the simple joys of connection and curiosity.</h3></p>
-            <p><h3>Our mission is to bring positivity, humor, and genuine connection to everyone we meet. Whether through our unique projects or everyday interactions, we aim to inspire and uplift.</h3></p><br>
+            <br>
+            <h1 style="color: #00bf63; font-size: 50px;">WHO ARE WE?</h1>
+            <h3>The Baby Matrix are a close-knit group of friends united by shared interests in learning, playing games, and staying updated on the latest news. From exploring new ideas to enjoying each other's company, we thrive on the simple joys of connection and curiosity.</h3>
+            <h3>Our mission is to bring positivity, humor, and genuine connection to everyone we meet. Whether through our unique projects or everyday interactions, we aim to inspire and uplift.</h3><br>
         </section>
         <section>
-            <h1>Our Values</h1>
+            <h1 style="color: #00bf63; font-size: 50px;">OUR VALUES</h1>
             <ul>
                 <li><h3>Friendship: We value trust, support, and the bonds that bring us together.</h3></li>
                 <li><h3>Learning: We encourage growth and discovery in everything we do.</h3></li>
-                <li><h3>Fun: We believe in enjoying life, sharing laughter, and creating lasting memories.<br><br><br><br></h3></li>
+                <li><h3>Fun: We believe in enjoying life, sharing laughter, and creating lasting memories.<br><br></h3></li>
             </ul>
         </section>
         <section>
-            <h1><center>Meet The Baby Matrix</center></h1>
+            <h1 style="color: #00bf63 ; font-size: 50px;"><center>MEET THE BABY MATRIX</center></h1>
             <div class="team">
                 <a href="/babyboyleader" class="team-member leader">
                     <img src="{{ url_for('static', filename='images/Galdiano.png') }}"" alt="Leader">
