@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile</title>
     <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins';
+            color: #ffffff; 
+            background-image: url("{{ url_for('static', filename='background/babymen.png') }}");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            padding-top: 40px;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            height: 100%;
         }
         header {
-            background-color: #ffffff;
-            color: #E94E77;
+            font-family: 'Poppins';
+            font-size: 30px;
+            color: #00bf63;
             padding: 10px 20px;
             text-align: center;
         }
         main {
             margin: 20px;
             padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Poppins';
         }
-        .profile-info {
-            margin: 10px 0;
-        }
-        .profile-info div {
-            margin: 10px 0;
-        }
+        
         .link-div {
             display: flex;
             justify-content: space-around; 
@@ -112,37 +116,98 @@
             font-size: 1.5em; 
             padding: 15px 25px; 
             display: inline-block;
-            color: #E94E77;
-            border: 2px solid #E94E77;
+            color: #00bf63;
+            border: 2px solid #00bf63;
             border-radius: 10px;
             transition: all 0.3s ease;
         }
 
         .back-link a:hover {
-            background-color: #E94E77;
+            background-color: #00bf63;
             color: white;
             text-decoration: underline;
         }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 10px solid #00bf63;
+
+        }
+        
+        .profile-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin: 30px;
+            margin-top: 30px;
+            margin-left: 90px;
+        }
+
+        .profile-container img {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 10px solid #00bf63;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .text-container h2 {
+            margin: 0;
+            font-size: 65px;
+            color: #00bf63;
+        }
+
+        .profile-info {
+            margin-top: 10px;
+            font-size: 19px;
+            color: #ffffff;
+        }
+
+        .profile-info div {
+            margin-bottom: 5px;
+        }
+        
     </style>
 </head>
 <body>
     <header>
-        <h1>Personal Profile<br></h1>
-        <h3>John Michael Plale</h3>
+        <br>
     </header>
     <main>
-        <div class="profile-info">
-            <div><strong>Hobbies:</strong> Playing Mobile Games, Solving Puzzles, and Watching Sports</div><br>
-            <div><strong>Address:</strong> Quezon City, Metro Manila</div><br>
-            <div><strong>Likes:</strong> Any Fruits, Chocolates, Chicken Mushroom</div><br>
-            <div><strong>Dislikes:</strong> People that are rude and lacks respect</div><br>
+        
+        <div class="profile-container">
+            <div class="team-member">
+             <img src="{{ url_for('static', filename='images/Plale.jpg') }}" alt="Leader">
+
+            </div>
+
+            <div class="text-container">
+              <h2>JOHN MICHAEL PLALE</h2>
+          
+              <div class="profile-info">
+                <div><strong>Hobbies:</strong> Playing Mobile Games, Solving Puzzles, and Watching Sports</div>
+            <div><strong>Address:</strong> Quezon City, Metro Manila</div>
+            <div><strong>Likes:</strong> Any Fruits, Chocolates, Chicken Mushroom</div>
+            <div><strong>Dislikes:</strong> People that are rude and lacks respect</div>
             <div><strong>Contact #:</strong> 09630113314</div><br>
             <div><center>"Don't stop when you're tired, stop when you're done"</center></div><br><br><br>
             
-            <div class="link-div">
-                <div class="facebook"><a href="https://web.facebook.com/johnmichael.plale" target="_blank"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook Logo">Facebook Profile</a></div>
-                <div class="github"><a href="https://github.com/jmplale" target="_blank"><img src="{{ url_for('static', filename='images/git.png') }}" alt="GitHub Logo">GitHub Profile</a></div>
+              </div>
             </div>
+          </div>
+            
+                <div class="link-div">
+                    <div class="facebook"><a href="https://web.facebook.com/johnmichael.plale" target="_blank"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook Logo">Facebook Profile</a></div>
+                    <div class="github"><a href="https://github.com/jmplale" target="_blank"><img src="{{ url_for('static', filename='images/git.png') }}" alt="GitHub Logo">GitHub Profile</a></div>
+                </div>
         </div><br>
 
         <footer>
